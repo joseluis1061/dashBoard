@@ -19,6 +19,10 @@ export const routes: Routes = [
     ]
   },
   {
+    path: 'login',
+    loadComponent: () => import("./business/auth/login/login.component").then(m => m.LoginComponent)
+  },
+  {
     path: '**',
     loadComponent: () => import("./shared/components/layout/layout.component").then(m => m.LayoutComponent),
   }
